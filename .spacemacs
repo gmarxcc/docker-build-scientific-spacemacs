@@ -32,8 +32,8 @@ values."
    dotspacemacs-configuration-layers
    '(auto-completion
      colors
-     dash
-     deft
+     ;;dash
+     ;;deft
      emacs-lisp
      emoji
      evil-snipe
@@ -49,13 +49,16 @@ values."
      rebox
      shell
      shell-scripts
-     smex
+     ;;smex
      speed-reading
      spell-checking
      syntax-checking
      themes-megapack
      version-control
-     vinegar)
+     ;;vinegar
+     ess
+     octave
+     python)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
