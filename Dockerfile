@@ -15,9 +15,11 @@ RUN apt-get update \
     dstat \
     firefox \
     && rm -rf /var/lib/apt/lists/*
-
 # Installation of r and rstudio
-
+RUN apt-get update \
+    && apt-get install \
+    python3
+# Copying .spacemacs file
 COPY .spacemacs "${UHOME}/.spacemacs"
 COPY private "${UHOME}/.emacs.d/private"
 
