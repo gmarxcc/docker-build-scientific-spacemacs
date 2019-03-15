@@ -26,6 +26,12 @@ RUN apt-get install \
     r-base -yq 
 RUN apt-get install \
     r-base-dev -yq
+#R-Studio
+RUN apt-get install \
+    gdebi-core -yq
+RUN wget \      https://download1.rstudio.org/rstudio-1.0.44-amd64.deb
+RUN gdebi rstudio-1.0.44-amd64.deb \
+    && rm rstudio-1.0.44-amd64.deb
     
 # Copying .spacemacs file
 COPY .spacemacs "${UHOME}/.spacemacs"
