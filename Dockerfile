@@ -18,7 +18,9 @@ RUN apt-get update \
 # Installation of r and rstudio
 RUN apt-get update \
     && apt-get install \
-    python3
+    python3 -yq
+RUN apt-get install \
+    spyder3 -yq
 # Copying .spacemacs file
 COPY .spacemacs "${UHOME}/.spacemacs"
 COPY private "${UHOME}/.emacs.d/private"
