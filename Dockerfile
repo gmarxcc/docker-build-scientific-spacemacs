@@ -31,14 +31,14 @@ RUN apt-get install \
     r-base -yq 
 RUN apt-get install \
     r-base-dev -yq
-#R-Studio
-RUN apt-get install \
-    wget -yq
-RUN apt-get install \   
-    gdebi-core -yq
-RUN wget https://download1.rstudio.org/rstudio-1.0.44-amd64.deb
-RUN gdebi rstudio-1.0.44-amd64.deb
-RUN rm rstudio-1.0.44-amd64.deb
+##R-Studio
+#RUN apt-get install \
+#    wget -yq
+#RUN apt-get install \   
+#    gdebi-core -yq
+#RUN wget https://download1.rstudio.org/rstudio-1.0.44-amd64.deb
+#RUN gdebi rstudio-1.0.44-amd64.deb
+#RUN rm rstudio-1.0.44-amd64.deb
 # end of 3    
 #------------------------ 
 # 4 Spacemacs Configuration and layer installation:
