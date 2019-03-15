@@ -9,18 +9,24 @@ LABEL version="1.0"
 LABEL description="Spacemacs editor and a full suite for scientific data analysis."
 
 
-# Ubuntu Xenial and firefox
+# Ubuntu bionic and firefox
 RUN apt-get update \
     && apt-get install \
     dstat \
     firefox \
     && rm -rf /var/lib/apt/lists/*
-# Installation of r and rstudio
+# Installation of python3 and spyder3
 RUN apt-get update \
     && apt-get install \
     python3 -yq
 RUN apt-get install \
     spyder3 -yq
+# Installation of R
+RUN apt-get install \
+    r-base -yq 
+RUN apt-get install \
+    r-base-dev -yq
+    
 # Copying .spacemacs file
 COPY .spacemacs "${UHOME}/.spacemacs"
 COPY private "${UHOME}/.emacs.d/private"
