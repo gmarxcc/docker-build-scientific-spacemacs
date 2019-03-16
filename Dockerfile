@@ -17,7 +17,8 @@ RUN apt-get update \
 # end of 1
 #---------------------    
 # 2 Installation of vim:
-RUN apt-get install \
+RUN apt-get update \
+    && apt-get install \
     vim 
 # end of 2
 #---------------------
