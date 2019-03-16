@@ -6,7 +6,6 @@ ENV UNAME="scientific-spacemacs"
 ENV UID="1000"
 MAINTAINER gmarxcc
 LABEL description="Spacemacs editor and a full suite for scientific data analysis."
-
 #----------------------
 # 1 Ubuntu bionic and firefox:
 RUN apt-get update \
