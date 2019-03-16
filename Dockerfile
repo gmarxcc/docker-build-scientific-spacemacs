@@ -5,6 +5,7 @@ FROM spacemacs/emacs25:develop
 ENV UNAME="scientific-spacemacs"
 ENV UID="1000"
 MAINTAINER gmarxcc
+LABEL version="0.1"
 LABEL description="Spacemacs editor and a full suite for scientific data analysis."
 #----------------------
 # 1 Ubuntu bionic and firefox:
@@ -15,9 +16,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 # end of 1
 #---------------------    
-# 2 Installation of git and Vim:
+# 2 Installation of vim:
 RUN apt-get install \
-    vim \
-    git
+    vim 
 # end of 2
 #---------------------
