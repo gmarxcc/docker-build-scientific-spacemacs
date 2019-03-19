@@ -2,7 +2,7 @@
 FROM spacemacs/emacs25:develop
 
 # Has to be secified before `RUN install-deps`
-ENV UNAME="scientific-spacemacs"
+ENV UNAME="scientific-r"
 ENV UID="1000"
 MAINTAINER gmarxcc
 LABEL version="0.1"
