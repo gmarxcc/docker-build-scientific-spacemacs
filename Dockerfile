@@ -15,10 +15,18 @@ RUN apt-get update \
     firefox \
     && rm -rf /var/lib/apt/lists/*
 # end of 1
-#---------------------    
-# 2 Installation of vim:
-RUN apt-get update \
-    && apt-get install \
-    vim 
-# end of 2
 #---------------------
+#2 Octave installation
+RUN apt-get update
+RUN apt-get install \
+    octave
+# end of 2
+#----------------------
+# 3 Spacemacs Configuration and layer installation:
+# Copying .spacemacs file
+COPY .spacemacs "${UHOME}/.spacemacs"
+COPY private "${UHOME}/.emacs.d/private"
+# Install layers dependencies and initialize the user
+RUN install-deps
+# end of 3
+#-------------------------   
