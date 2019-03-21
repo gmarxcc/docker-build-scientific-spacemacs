@@ -21,4 +21,18 @@ RUN apt-get update \
     && apt-get install \
     vim 
 # end of 2
-#---------------------
+#------------------------ 
+# 3 texlive-latex-extra:
+RUN apt-get update \
+    && apt-get install \
+    texlive-latex-extra
+# end of 3
+#-----------------------
+# 4 Spacemacs Configuration and layer installation:
+# Copying .spacemacs file
+COPY .spacemacs "${UHOME}/.spacemacs"
+COPY private "${UHOME}/.emacs.d/private"
+# Install layers dependencies and initialize the user
+RUN install-deps
+# end of 4
+#-------------------------
