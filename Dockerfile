@@ -25,7 +25,7 @@ RUN apt-get update \
 # 3 texlive-latex-extra:
 RUN apt-get update \
     && apt-get install \
-    texlive-latex-extra
+    texlive-full
 # end of 3
 #-----------------------
 # 4 Spacemacs Configuration and layer installation:
